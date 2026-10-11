@@ -1,0 +1,3061 @@
+{
+  "categories": [
+    {
+      "id": "english",
+      "title": "English",
+      "description": "Подготовка по английскому: от Kids English до IELTS",
+      "tests": [
+        "test1",
+        "test2",
+        "test3",
+        "test4",
+        "test5",
+        "test6"
+      ]
+    }
+  ],
+  "tests": {
+    "test1": {
+      "category": "english",
+      "title": "Kids English",
+      "level": "Pre-A1",
+      "questions": [
+        {
+          "question": "What color is a banana?",
+          "options": [
+            "Red",
+            "Black",
+            "Blue",
+            "Yellow"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "How many legs does a dog have?",
+          "options": [
+            "Four",
+            "Three",
+            "Six",
+            "Two"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "A cat is an ...",
+          "options": [
+            "animal",
+            "fruit",
+            "color",
+            "toy"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which one is a fruit?",
+          "options": [
+            "Door",
+            "Pencil",
+            "Apple",
+            "Chair"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Hello! What's your name?\"",
+          "options": [
+            "It is red.",
+            "I like pizza.",
+            "I am seven.",
+            "My name is Tom."
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"How old are you?\"",
+          "options": [
+            "I am fine.",
+            "I am Anna.",
+            "I am eight.",
+            "It is a dog."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The sun is in the ...",
+          "options": [
+            "box",
+            "sea",
+            "sky",
+            "floor"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which animal says \"meow\"?",
+          "options": [
+            "Cat",
+            "Duck",
+            "Dog",
+            "Cow"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Two plus three is ...",
+          "options": [
+            "four",
+            "five",
+            "six",
+            "seven"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "I ___ a boy.",
+          "options": [
+            "be",
+            "is",
+            "am",
+            "are"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "She ___ a girl.",
+          "options": [
+            "be",
+            "is",
+            "am",
+            "are"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "This is ___ apple.",
+          "options": [
+            "many",
+            "a",
+            "an",
+            "some"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"What is it?\"",
+          "options": [
+            "It's a book.",
+            "They're book.",
+            "He is a book.",
+            "I'm a book."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which word is a color?",
+          "options": [
+            "Happy",
+            "Run",
+            "Table",
+            "Green"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Monday, Tuesday, ___",
+          "options": [
+            "January",
+            "Sunday",
+            "Friday",
+            "Wednesday"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "We eat with a ___.",
+          "options": [
+            "spoon",
+            "shoe",
+            "hat",
+            "bed"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I wear ___ on my feet.",
+          "options": [
+            "shoes",
+            "gloves",
+            "a hat",
+            "a scarf"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which one is a pet?",
+          "options": [
+            "Lion",
+            "Elephant",
+            "Tiger",
+            "Dog"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "A baby cow is a ___.",
+          "options": [
+            "chick",
+            "kitten",
+            "calf",
+            "puppy"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The opposite of \"big\" is ...",
+          "options": [
+            "long",
+            "small",
+            "tall",
+            "fast"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The opposite of \"hot\" is ...",
+          "options": [
+            "warm",
+            "sunny",
+            "cold",
+            "dry"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "How many days are in a week?",
+          "options": [
+            "Seven",
+            "Five",
+            "Ten",
+            "Twelve"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "We say \"Good night\" when we ___.",
+          "options": [
+            "go to bed",
+            "wake up",
+            "go to school",
+            "eat breakfast"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I ___ milk.",
+          "options": [
+            "like",
+            "likes",
+            "am like",
+            "liking"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"Can a bird fly?\"",
+          "options": [
+            "Yes, it is.",
+            "Yes, it can.",
+            "Yes, it does.",
+            "Yes, I am."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "There are ___ eyes on my face.",
+          "options": [
+            "ten",
+            "two",
+            "one",
+            "five"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which one is a vegetable?",
+          "options": [
+            "Cake",
+            "Banana",
+            "Orange",
+            "Carrot"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Please ___ the door.",
+          "options": [
+            "drink",
+            "open",
+            "eat",
+            "sleep"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "My mother's mother is my ___.",
+          "options": [
+            "grandmother",
+            "sister",
+            "daughter",
+            "aunt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "What do you say when you meet a friend?",
+          "options": [
+            "Hello!",
+            "Goodbye!",
+            "Good night!",
+            "See you later!"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which one is a number?",
+          "options": [
+            "Nice",
+            "Nine",
+            "Nose",
+            "Name"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A ___ has wings.",
+          "options": [
+            "bird",
+            "horse",
+            "fish",
+            "dog"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Fish live in ___.",
+          "options": [
+            "cars",
+            "houses",
+            "trees",
+            "water"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I go to ___ to learn.",
+          "options": [
+            "the beach",
+            "the zoo",
+            "school",
+            "the park"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which one is a toy?",
+          "options": [
+            "Spoon",
+            "Table",
+            "Ball",
+            "Window"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "What is the plural of \"cat\"?",
+          "options": [
+            "cat's",
+            "cats",
+            "cates",
+            "caties"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What is the plural of \"box\"?",
+          "options": [
+            "boxes",
+            "boxen",
+            "boxies",
+            "boxs"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "This is my brother. ___ name is Ben.",
+          "options": [
+            "Its",
+            "His",
+            "Their",
+            "Her"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"Where is the cat?\" \"It's ___ the box.\"",
+          "options": [
+            "to",
+            "at",
+            "from",
+            "in"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I have ___ ice cream.",
+          "options": [
+            "a",
+            "many",
+            "two",
+            "an"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "When do we sleep?",
+          "options": [
+            "At school.",
+            "At breakfast.",
+            "At night.",
+            "In the morning."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which one is hot?",
+          "options": [
+            "Fire",
+            "Ice",
+            "Ice cream",
+            "Snow"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I can ___ a song.",
+          "options": [
+            "wash",
+            "open",
+            "sing",
+            "drink"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Winter is ___.",
+          "options": [
+            "hot",
+            "cold",
+            "sweet",
+            "round"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which one is a body part?",
+          "options": [
+            "Aunt",
+            "Arm",
+            "Apple",
+            "Arrow"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"Thank you!\"",
+          "options": [
+            "It's a cat.",
+            "Good night.",
+            "You're welcome.",
+            "I'm ten."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "How do you spell \"dog\"?",
+          "options": [
+            "T-O-G",
+            "D-A-G",
+            "D-O-G",
+            "D-U-G"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Pizza is ...",
+          "options": [
+            "a color",
+            "food",
+            "an animal",
+            "a toy"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A rabbit has long ___.",
+          "options": [
+            "fins",
+            "ears",
+            "wheels",
+            "wings"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Let's ___ football!",
+          "options": [
+            "wear",
+            "read",
+            "eat",
+            "play"
+          ],
+          "correct": 3
+        }
+      ]
+    },
+    "test2": {
+      "category": "english",
+      "title": "Beginner",
+      "level": "A1",
+      "questions": [
+        {
+          "question": "She ___ a teacher.",
+          "options": [
+            "be",
+            "are",
+            "am",
+            "is"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "They ___ from Italy.",
+          "options": [
+            "am",
+            "is",
+            "be",
+            "are"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I ___ coffee every morning.",
+          "options": [
+            "drink",
+            "drinks",
+            "drinking",
+            "am drink"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "He ___ football on Sundays.",
+          "options": [
+            "playing",
+            "plays",
+            "play",
+            "is play"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "___ you like tea?",
+          "options": [
+            "Are",
+            "Do",
+            "Does",
+            "Is"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "___ she live in London?",
+          "options": [
+            "Are",
+            "Does",
+            "Is",
+            "Do"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "There ___ two books on the table.",
+          "options": [
+            "are",
+            "is",
+            "be",
+            "am"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "This is ___ umbrella.",
+          "options": [
+            "a",
+            "an",
+            "some",
+            "any"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "What ___ your name?",
+          "options": [
+            "be",
+            "are",
+            "am",
+            "is"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "How ___ are you? – I'm ten.",
+          "options": [
+            "years",
+            "age",
+            "big",
+            "old"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "My sister is ___ than me.",
+          "options": [
+            "old",
+            "more old",
+            "oldest",
+            "older"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": [
+            "He don't like fish.",
+            "He doesn't like fish.",
+            "He not like fish.",
+            "He doesn't likes fish."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "I ___ breakfast at 7 o'clock.",
+          "options": [
+            "has",
+            "have",
+            "having",
+            "haves"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The plural of \"child\" is ...",
+          "options": [
+            "childes",
+            "children",
+            "childrens",
+            "childs"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The plural of \"woman\" is ...",
+          "options": [
+            "womanes",
+            "womens",
+            "women",
+            "womans"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "___ is your birthday? – In June.",
+          "options": [
+            "When",
+            "Who",
+            "Where",
+            "Why"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "___ is that man? – He's my uncle.",
+          "options": [
+            "How many",
+            "When",
+            "Who",
+            "Which"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I live ___ Paris.",
+          "options": [
+            "to",
+            "on",
+            "in",
+            "at"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The shop opens ___ nine o'clock.",
+          "options": [
+            "at",
+            "on",
+            "by",
+            "in"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "My birthday is ___ May.",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "by"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "We have English ___ Monday.",
+          "options": [
+            "at",
+            "in",
+            "on",
+            "of"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Can you ___ English?",
+          "options": [
+            "speaking",
+            "speak",
+            "speaks",
+            "to speaking"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "She ___ swim.",
+          "options": [
+            "doesn't",
+            "don't",
+            "can't",
+            "isn't"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The opposite of \"open\" is ...",
+          "options": [
+            "push",
+            "start",
+            "close",
+            "wait"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The number after nineteen is ...",
+          "options": [
+            "twenty",
+            "ninety",
+            "twelve",
+            "twenty-one"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which month comes after March?",
+          "options": [
+            "May",
+            "April",
+            "February",
+            "June"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "3:30 is ...",
+          "options": [
+            "three past half",
+            "thirty three",
+            "half to three",
+            "half past three"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Where ___ you from?",
+          "options": [
+            "is",
+            "are",
+            "does",
+            "do"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "He ___ got a car.",
+          "options": [
+            "does",
+            "have",
+            "is",
+            "has"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "We ___ a big house.",
+          "options": [
+            "have",
+            "are",
+            "is",
+            "has"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Anna is my friend. ___ is funny.",
+          "options": [
+            "He",
+            "She",
+            "They",
+            "It"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Tom and I are friends. ___ play tennis.",
+          "options": [
+            "You",
+            "He",
+            "They",
+            "We"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "It's my book. It's ___.",
+          "options": [
+            "me",
+            "my's",
+            "mine",
+            "I"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Whose bag is this? It's ___.",
+          "options": [
+            "hes",
+            "her's",
+            "she",
+            "hers"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Look! The baby ___ now.",
+          "options": [
+            "slept",
+            "sleeps",
+            "sleep",
+            "is sleeping"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "She ___ to school by bus.",
+          "options": [
+            "go",
+            "goes",
+            "gos",
+            "going"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Yesterday I ___ to the park.",
+          "options": [
+            "going",
+            "went",
+            "go",
+            "goed"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The past of \"have\" is ...",
+          "options": [
+            "haven",
+            "had",
+            "haved",
+            "has"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"I ___ at home yesterday.\"",
+          "options": [
+            "been",
+            "am",
+            "were",
+            "was"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Would you like ___ tea?",
+          "options": [
+            "a",
+            "an",
+            "some",
+            "many"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "There isn't ___ milk.",
+          "options": [
+            "some",
+            "a",
+            "many",
+            "any"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "How ___ apples do you want?",
+          "options": [
+            "much",
+            "often",
+            "many",
+            "long"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "How ___ is this T-shirt? – Ten dollars.",
+          "options": [
+            "much",
+            "long",
+            "many",
+            "old"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "The opposite of \"young\" is ...",
+          "options": [
+            "thin",
+            "small",
+            "new",
+            "old"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Which word is a job?",
+          "options": [
+            "Doctor",
+            "Quickly",
+            "Yellow",
+            "Window"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Choose the correct sentence.",
+          "options": [
+            "I are a student.",
+            "I am a student.",
+            "I is a student.",
+            "Me a student."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "___ the window, please. It's hot.",
+          "options": [
+            "Open",
+            "Opens",
+            "To open",
+            "Opening"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which day is after Friday?",
+          "options": [
+            "Saturday",
+            "Sunday",
+            "Thursday",
+            "Wednesday"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "My mother's brother is my ___.",
+          "options": [
+            "grandfather",
+            "cousin",
+            "nephew",
+            "uncle"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"Nice to meet you.\"",
+          "options": [
+            "See you.",
+            "Yes, I do.",
+            "I'm fine, thanks.",
+            "Nice to meet you, too."
+          ],
+          "correct": 3
+        }
+      ]
+    },
+    "test3": {
+      "category": "english",
+      "title": "Elementary",
+      "level": "A2",
+      "questions": [
+        {
+          "question": "I ___ my homework when you called.",
+          "options": [
+            "do",
+            "was doing",
+            "have do",
+            "am doing"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "She has lived here ___ 2015.",
+          "options": [
+            "since",
+            "during",
+            "for",
+            "ago"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "We've been friends ___ ten years.",
+          "options": [
+            "during",
+            "since",
+            "from",
+            "for"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "If it rains, we ___ at home.",
+          "options": [
+            "staying",
+            "will stay",
+            "stayed",
+            "would stay"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "He is ___ than his brother.",
+          "options": [
+            "more tall",
+            "tallest",
+            "most tall",
+            "taller"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "This is the ___ film I have ever seen.",
+          "options": [
+            "better",
+            "good",
+            "most good",
+            "best"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "She is ___ girl in our class.",
+          "options": [
+            "the most intelligent",
+            "more intelligent",
+            "most intelligent",
+            "the intelligenter"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "You ___ smoke here. It's forbidden.",
+          "options": [
+            "might",
+            "would",
+            "don't have to",
+            "mustn't"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I ___ get up early tomorrow. I have a meeting.",
+          "options": [
+            "have to",
+            "must to",
+            "has to",
+            "am have to"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "We ___ to the cinema last Friday.",
+          "options": [
+            "have gone",
+            "go",
+            "went",
+            "were go"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "___ you ever been to Japan?",
+          "options": [
+            "Are",
+            "Do",
+            "Have",
+            "Did"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I ___ my keys. I can't find them.",
+          "options": [
+            "am losing",
+            "lose",
+            "was lose",
+            "have lost"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Look at those clouds! It ___ rain.",
+          "options": [
+            "will",
+            "does",
+            "is going to",
+            "is"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"I'm hungry.\" \"I ___ make you a sandwich.\"",
+          "options": [
+            "do",
+            "am",
+            "have",
+            "'ll"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": [
+            "There aren't any chairs.",
+            "There aren't some chairs.",
+            "There isn't any chairs.",
+            "There not any chairs."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "She's good ___ maths.",
+          "options": [
+            "in",
+            "for",
+            "at",
+            "on"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I'm interested ___ music.",
+          "options": [
+            "about",
+            "in",
+            "at",
+            "on"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "He is afraid ___ spiders.",
+          "options": [
+            "of",
+            "for",
+            "from",
+            "with"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I look forward ___ you.",
+          "options": [
+            "to see",
+            "for seeing",
+            "see",
+            "to seeing"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "She enjoys ___.",
+          "options": [
+            "swim",
+            "swimming",
+            "swum",
+            "to swim"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "I want ___ a doctor.",
+          "options": [
+            "been",
+            "to be",
+            "be",
+            "being"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "He decided ___ the job.",
+          "options": [
+            "to leave",
+            "leaving",
+            "leave",
+            "left"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Could you ___ me the way to the station?",
+          "options": [
+            "tell",
+            "talk",
+            "speak",
+            "say"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Can I ___ your pen, please?",
+          "options": [
+            "bring",
+            "lend",
+            "borrow",
+            "give"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "She ___ me a letter last week.",
+          "options": [
+            "sent",
+            "talked",
+            "told",
+            "said"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Don't forget ___ the door.",
+          "options": [
+            "to lock",
+            "locking",
+            "lock",
+            "locked"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "The opposite of \"arrive\" is ...",
+          "options": [
+            "stay",
+            "come",
+            "leave",
+            "enter"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which job is connected with food in a restaurant?",
+          "options": [
+            "Nurse",
+            "Waiter",
+            "Pilot",
+            "Driver"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A synonym of \"big\" is ...",
+          "options": [
+            "large",
+            "tiny",
+            "thin",
+            "short"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Where do you buy medicine?",
+          "options": [
+            "At a bakery",
+            "At a bank",
+            "At a library",
+            "At a pharmacy"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"How often do you go to the gym?\"",
+          "options": [
+            "Yesterday.",
+            "At six.",
+            "For two hours.",
+            "Twice a week."
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"How long does it take?\"",
+          "options": [
+            "On Monday.",
+            "Every day.",
+            "About an hour.",
+            "By car."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "He is the man ___ lives next door.",
+          "options": [
+            "which",
+            "where",
+            "whose",
+            "who"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "This is the book ___ I told you about.",
+          "options": [
+            "who",
+            "that",
+            "what",
+            "whose"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "It's the city ___ I was born.",
+          "options": [
+            "which",
+            "where",
+            "who",
+            "when"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "My phone, ___ is new, doesn't work.",
+          "options": [
+            "who",
+            "what",
+            "whose",
+            "which"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I used to ___ football when I was a child.",
+          "options": [
+            "play",
+            "played",
+            "playing",
+            "plays"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "She asked me where I ___.",
+          "options": [
+            "live",
+            "have live",
+            "lived",
+            "am living"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The tea is ___ hot to drink.",
+          "options": [
+            "too",
+            "very much",
+            "so many",
+            "enough"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "She isn't old ___ to drive.",
+          "options": [
+            "so",
+            "enough",
+            "too",
+            "very"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "There is ___ milk in the fridge.",
+          "options": [
+            "a few",
+            "many",
+            "a little",
+            "several"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "There are ___ people in the park today.",
+          "options": [
+            "a lot of",
+            "a little",
+            "much",
+            "little"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Please wait ___ I come back.",
+          "options": [
+            "by",
+            "until",
+            "since",
+            "during"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": [
+            "I haven't seen him since a long time.",
+            "I haven't seen him for a long time.",
+            "I don't see him for a long time.",
+            "I didn't see him since a long time."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"What's the weather like?\"",
+          "options": [
+            "It's my friend.",
+            "It's Monday.",
+            "It's sunny.",
+            "It's a doctor."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Would you like some coffee?\"",
+          "options": [
+            "I'm fine, I would.",
+            "No, I don't.",
+            "Yes, I like.",
+            "Yes, please."
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"I'm sorry I'm late.\"",
+          "options": [
+            "Not at all, thanks.",
+            "That's OK.",
+            "You're welcome.",
+            "Me too."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which sentence is in the passive?",
+          "options": [
+            "He wrote a letter.",
+            "The letter was written yesterday.",
+            "They are writing a letter.",
+            "She writes letters."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The shop ___ at 9 a.m. every day.",
+          "options": [
+            "opening",
+            "opened",
+            "opens",
+            "open"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The opposite of \"cheap\" is ...",
+          "options": [
+            "small",
+            "slow",
+            "expensive",
+            "late"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    "test4": {
+      "category": "english",
+      "title": "Pre-Intermediate",
+      "level": "A2+/B1",
+      "questions": [
+        {
+          "question": "If I ___ rich, I would travel the world.",
+          "options": [
+            "were",
+            "will be",
+            "am",
+            "would be"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "If she studied harder, she ___ the exam.",
+          "options": [
+            "passed",
+            "passes",
+            "will pass",
+            "would pass"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I wish I ___ more free time.",
+          "options": [
+            "have",
+            "will have",
+            "had",
+            "would have"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "He ___ in the city for five years before he moved.",
+          "options": [
+            "had lived",
+            "has lived",
+            "is living",
+            "lives"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "By the time we arrived, the film ___.",
+          "options": [
+            "started",
+            "was starting",
+            "had started",
+            "has started"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "She told me she ___ tired.",
+          "options": [
+            "were",
+            "be",
+            "is",
+            "was"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "He asked me ___ I was from.",
+          "options": [
+            "what",
+            "where",
+            "that",
+            "how"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The window ___ by someone last night.",
+          "options": [
+            "was broken",
+            "is broken",
+            "has broken",
+            "broke"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "English ___ all over the world.",
+          "options": [
+            "is spoken",
+            "spoke",
+            "speaks",
+            "is speaking"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I'm not used to ___ up early.",
+          "options": [
+            "got",
+            "getting",
+            "get",
+            "gets"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "She suggested ___ to the beach.",
+          "options": [
+            "go",
+            "going",
+            "went",
+            "to go"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "He admitted ___ the money.",
+          "options": [
+            "taking",
+            "took",
+            "to take",
+            "take"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I'd rather ___ at home tonight.",
+          "options": [
+            "to stay",
+            "staying",
+            "stay",
+            "stayed"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "You ___ better see a doctor.",
+          "options": [
+            "would",
+            "had",
+            "have",
+            "are"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "I can't ___ my keys anywhere.",
+          "options": [
+            "find",
+            "see",
+            "look",
+            "search"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Please ___ the lights when you leave.",
+          "options": [
+            "put off",
+            "take off",
+            "turn up",
+            "turn off"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "We ran ___ petrol on the motorway.",
+          "options": [
+            "off",
+            "out of",
+            "away from",
+            "down"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Look ___ the word in a dictionary.",
+          "options": [
+            "into",
+            "after",
+            "up",
+            "forward"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "She takes ___ her mother. They look alike.",
+          "options": [
+            "out",
+            "after",
+            "up",
+            "over"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The meeting was put ___ until Friday.",
+          "options": [
+            "off",
+            "up",
+            "out",
+            "away"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I get ___ well with my colleagues.",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "to"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A synonym of \"happy\" is ...",
+          "options": [
+            "glad",
+            "sad",
+            "tired",
+            "angry"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "The opposite of \"generous\" is ...",
+          "options": [
+            "friendly",
+            "kind",
+            "mean",
+            "rich"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "A person who writes books is an ...",
+          "options": [
+            "author",
+            "farmer",
+            "singer",
+            "doctor"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Can you ___ me your book until Monday?",
+          "options": [
+            "rent",
+            "borrow",
+            "lend",
+            "take"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "He is very ___; he never tells lies.",
+          "options": [
+            "rude",
+            "shy",
+            "honest",
+            "lazy"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The film was ___.",
+          "options": [
+            "bores",
+            "bored",
+            "boring",
+            "bore"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I was ___ by the news.",
+          "options": [
+            "surprised",
+            "surprise",
+            "surprising",
+            "surprisingly"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "It's ___ to learn a language than to forget it.",
+          "options": [
+            "more easy",
+            "most easy",
+            "easier",
+            "easy"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "He drives ___ than I do.",
+          "options": [
+            "most carefully",
+            "more carefully",
+            "carefuller",
+            "more careful"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "She speaks English ___.",
+          "options": [
+            "fluentness",
+            "fluently",
+            "fluent",
+            "fluency"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which noun is uncountable?",
+          "options": [
+            "Information",
+            "Book",
+            "Student",
+            "Idea"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": [
+            "I have some advices for you.",
+            "I have advices for you.",
+            "I have some advice for you.",
+            "I have an advices for you."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Neither of them ___ here.",
+          "options": [
+            "are",
+            "were",
+            "have",
+            "is"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Everyone ___ happy today.",
+          "options": [
+            "be",
+            "are",
+            "is",
+            "were"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "She has ___ finished her work.",
+          "options": [
+            "since",
+            "just",
+            "ago",
+            "yet"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "I haven't finished my essay ___.",
+          "options": [
+            "already",
+            "just",
+            "yet",
+            "ago"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "He left two hours ___.",
+          "options": [
+            "for",
+            "since",
+            "ago",
+            "before"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I've been waiting ___ an hour.",
+          "options": [
+            "from",
+            "for",
+            "since",
+            "during"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Where ___ yesterday?",
+          "options": [
+            "were you go",
+            "did you go",
+            "do you go",
+            "have you gone"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "While I ___ dinner, the lights went out.",
+          "options": [
+            "was cooking",
+            "cooked",
+            "cook",
+            "have cooked"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "It's the first time I ___ sushi.",
+          "options": [
+            "have eaten",
+            "am eating",
+            "ate",
+            "eat"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "The man ___ car was stolen called the police.",
+          "options": [
+            "whose",
+            "which",
+            "who",
+            "whom"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Do you know what time ___?",
+          "options": [
+            "the train does leave",
+            "the train leaves",
+            "does the train leave",
+            "leaves the train"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "You ___ wear a seatbelt. It's the law.",
+          "options": [
+            "may",
+            "might",
+            "must",
+            "needn't"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"He doesn't have to work on Sundays.\" This means ...",
+          "options": [
+            "It isn't necessary.",
+            "It is dangerous.",
+            "It is forbidden.",
+            "It is impossible."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"I'm afraid I can't come to your party.\"",
+          "options": [
+            "Happy birthday!",
+            "Congratulations!",
+            "What a pity!",
+            "Cheers!"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Would you mind opening the window?\"",
+          "options": [
+            "Not at all.",
+            "Yes, I'm opening.",
+            "Me too.",
+            "You're welcome."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"How about going out tonight?\"",
+          "options": [
+            "Yes, I go.",
+            "No, how about.",
+            "Good idea!",
+            "I don't like."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "There's a lot of traffic, ___ I'll be late.",
+          "options": [
+            "although",
+            "because",
+            "so",
+            "unless"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    "test5": {
+      "category": "english",
+      "title": "Intermediate",
+      "level": "B1",
+      "questions": [
+        {
+          "question": "If I had known, I ___ you.",
+          "options": [
+            "would tell",
+            "would have told",
+            "will tell",
+            "had told"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "If she ___ earlier, she wouldn't have missed the bus.",
+          "options": [
+            "had left",
+            "would leave",
+            "left",
+            "leaves"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I wish I ___ that.",
+          "options": [
+            "haven't said",
+            "hadn't said",
+            "didn't say",
+            "wouldn't say"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "By next year, I ___ my studies.",
+          "options": [
+            "will finish",
+            "have finished",
+            "finish",
+            "will have finished"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "She ___ for the company since 2019.",
+          "options": [
+            "has worked",
+            "works",
+            "worked",
+            "is working"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "He didn't reply, so he must ___ the message.",
+          "options": [
+            "miss",
+            "to miss",
+            "missed",
+            "have missed"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "You ___ be tired after such a long journey.",
+          "options": [
+            "can't",
+            "won't",
+            "mustn't",
+            "must"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "The report ___ finished by Friday.",
+          "options": [
+            "must have",
+            "must be",
+            "must being",
+            "must"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "He denied ___ the window.",
+          "options": [
+            "breaking",
+            "break",
+            "broke",
+            "to break"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "We regret ___ you that your application was unsuccessful.",
+          "options": [
+            "to inform",
+            "inform",
+            "having inform",
+            "informing"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I remember ___ the door; I'm sure it's locked.",
+          "options": [
+            "locking",
+            "to lock",
+            "locked",
+            "lock"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "It's no use ___ about it.",
+          "options": [
+            "worried",
+            "worry",
+            "worrying",
+            "to worry"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "She's used to ___ alone.",
+          "options": [
+            "to live",
+            "lived",
+            "living",
+            "live"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "The children ___ by their grandmother while we were away.",
+          "options": [
+            "were look after",
+            "have looked after",
+            "looked after",
+            "were looked after"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "He is said ___ a millionaire.",
+          "options": [
+            "is",
+            "that be",
+            "to be",
+            "being"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I had my car ___ yesterday.",
+          "options": [
+            "repairing",
+            "repair",
+            "repaired",
+            "to repair"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Not only ___ late, but he also forgot the documents.",
+          "options": [
+            "did he were",
+            "he is",
+            "was he",
+            "he was"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Hardly had we sat down ___ the music started.",
+          "options": [
+            "while",
+            "when",
+            "then",
+            "than"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The more you practise, ___ you become.",
+          "options": [
+            "the better",
+            "better",
+            "the best",
+            "more better"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "He's the person ___ I spoke to yesterday.",
+          "options": [
+            "which",
+            "where",
+            "whose",
+            "whom"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "The house, ___ roof was damaged, was sold.",
+          "options": [
+            "who's",
+            "whose",
+            "that",
+            "which"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "___ tired, she kept working.",
+          "options": [
+            "Despite being",
+            "Despite she was",
+            "Although being",
+            "Because"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "___ the rain, we went for a walk.",
+          "options": [
+            "Because of",
+            "In spite of",
+            "Unless",
+            "Although"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "___ he was ill, he went to work.",
+          "options": [
+            "However",
+            "Because of",
+            "Despite",
+            "Although"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "You'll fail ___ you study harder.",
+          "options": [
+            "so",
+            "when",
+            "because",
+            "unless"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I'll lend you the book as long as you ___ it back.",
+          "options": [
+            "brings",
+            "bring",
+            "will bring",
+            "would bring"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "She's out of breath. She ___.",
+          "options": [
+            "runs",
+            "has been running",
+            "ran",
+            "is running"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A synonym of \"reluctant\" is ...",
+          "options": [
+            "ready",
+            "keen",
+            "eager",
+            "unwilling"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "A synonym of \"essential\" is ...",
+          "options": [
+            "rare",
+            "minor",
+            "vital",
+            "optional"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "I need to ___ the washing-up.",
+          "options": [
+            "do",
+            "take",
+            "have",
+            "make"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Let's ___ a photo of the group.",
+          "options": [
+            "make",
+            "take",
+            "put",
+            "do"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"To put up with\" means ...",
+          "options": [
+            "to tolerate",
+            "to delay",
+            "to invent",
+            "to refuse"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"To come up with an idea\" means ...",
+          "options": [
+            "to forget it",
+            "to think of it",
+            "to cancel it",
+            "to copy it"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"To turn down an offer\" means ...",
+          "options": [
+            "to refuse it",
+            "to accept it",
+            "to improve it",
+            "to consider it"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"To carry out an experiment\" means ...",
+          "options": [
+            "to cancel it",
+            "to avoid it",
+            "to perform it",
+            "to read it"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"My car broke down\" means ...",
+          "options": [
+            "it was cleaned",
+            "it was sold",
+            "it stopped working",
+            "it got faster"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which word is a noun?",
+          "options": [
+            "Happily",
+            "Happiness",
+            "Happen",
+            "Happy"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which word is an adverb?",
+          "options": [
+            "Careful",
+            "Care",
+            "Careless",
+            "Carefully"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "The opposite of \"temporary\" is ...",
+          "options": [
+            "short",
+            "brief",
+            "permanent",
+            "quick"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"To get over an illness\" means ...",
+          "options": [
+            "to catch it",
+            "to cause it",
+            "to avoid it",
+            "to recover from it"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"I'm feeling under the weather\" means ...",
+          "options": [
+            "I'm slightly ill.",
+            "I'm outside.",
+            "It's raining.",
+            "I'm angry."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"It's a piece of cake\" means ...",
+          "options": [
+            "It's expensive.",
+            "It's delicious.",
+            "It's very easy.",
+            "It's small."
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Break a leg!\" means ...",
+          "options": [
+            "Good luck!",
+            "Hurry up!",
+            "Be careful!",
+            "Stop!"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"Once in a blue moon\" means ...",
+          "options": [
+            "every night",
+            "often",
+            "very rarely",
+            "at midnight"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Hit the books\" means ...",
+          "options": [
+            "break something",
+            "study hard",
+            "go shopping",
+            "fight"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": [
+            "Neither of the answers is correct.",
+            "None of the answer is correct.",
+            "Neither of the answers are correct.",
+            "Neither answers is correct."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "The police ___ looking for him.",
+          "options": [
+            "has",
+            "is",
+            "was",
+            "are"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Which sentence is correct?",
+          "options": [
+            "I look forward to hear from you.",
+            "I look forward to hearing from you.",
+            "I look forward for hearing from you.",
+            "I look forward hearing from you."
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"Do you mind if I sit here?\"",
+          "options": [
+            "No, go ahead.",
+            "Yes, of course sit.",
+            "Yes, please.",
+            "No, I don't sit."
+          ],
+          "correct": 0
+        },
+        {
+          "question": "I ___ him since we were at school.",
+          "options": [
+            "am knowing",
+            "knew",
+            "know",
+            "have known"
+          ],
+          "correct": 3
+        }
+      ]
+    },
+    "test6": {
+      "category": "english",
+      "title": "IELTS Preparation",
+      "level": "B2-C1",
+      "questions": [
+        {
+          "question": "The graph ___ a sharp increase in sales in 2020.",
+          "options": [
+            "show",
+            "shown",
+            "is show",
+            "shows"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Sales ___ significantly between 2010 and 2015.",
+          "options": [
+            "rised",
+            "raised",
+            "arose",
+            "rose"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "The number of students ___ from 200 to 350.",
+          "options": [
+            "rised",
+            "raised",
+            "was increased",
+            "increased"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"A slight decrease\" means ...",
+          "options": [
+            "a sudden rise",
+            "a small fall",
+            "a steady rise",
+            "no change"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Prices ___ stable throughout the period.",
+          "options": [
+            "remaining",
+            "remained",
+            "were remained",
+            "remain at"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"To fluctuate\" means ...",
+          "options": [
+            "to stay the same",
+            "to rise steadily",
+            "to fall sharply",
+            "to go up and down"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"To plummet\" means ...",
+          "options": [
+            "to stay level",
+            "to rise slowly",
+            "to recover",
+            "to fall dramatically"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "\"The figure peaked in 2018\" means ...",
+          "options": [
+            "it fell to its lowest level",
+            "it stayed constant",
+            "it began to rise",
+            "it reached its highest level"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Which word is closest in meaning to \"approximately\"?",
+          "options": [
+            "mostly",
+            "exactly",
+            "rarely",
+            "roughly"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "Which phrase best describes 49%?",
+          "options": [
+            "just under half",
+            "a quarter",
+            "a third",
+            "just over half"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "The pie chart ___ the proportion of energy by source.",
+          "options": [
+            "illustrates",
+            "illustrating",
+            "is illustrate",
+            "illustrate"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "In contrast ___ cars, bicycles are cheap.",
+          "options": [
+            "with",
+            "to",
+            "for",
+            "of"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Compared ___ 2010, the figure was higher in 2020.",
+          "options": [
+            "on",
+            "with",
+            "by",
+            "of"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which linking word shows contrast?",
+          "options": [
+            "Moreover",
+            "Therefore",
+            "However",
+            "Furthermore"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which linking word shows addition?",
+          "options": [
+            "However",
+            "Nevertheless",
+            "Moreover",
+            "Whereas"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which linking word shows result?",
+          "options": [
+            "Consequently",
+            "Whereas",
+            "Although",
+            "Despite"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "___ the advantages, there are some drawbacks.",
+          "options": [
+            "Although",
+            "Despite",
+            "However",
+            "Whereas"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Some people argue ___ technology isolates us.",
+          "options": [
+            "which",
+            "what",
+            "that",
+            "of"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "It is widely believed ___ exercise improves memory.",
+          "options": [
+            "of",
+            "which",
+            "what",
+            "that"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "I strongly agree ___ the statement.",
+          "options": [
+            "on",
+            "with",
+            "for",
+            "to"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"To sum up\" is used in the ...",
+          "options": [
+            "conclusion",
+            "topic sentence",
+            "introduction",
+            "examples"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"For instance\" is used to ...",
+          "options": [
+            "conclude",
+            "show time",
+            "show contrast",
+            "give an example"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "What is the minimum word count for IELTS Writing Task 2?",
+          "options": [
+            "100 words",
+            "150 words",
+            "500 words",
+            "250 words"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "What is the minimum word count for IELTS Writing Task 1?",
+          "options": [
+            "300 words",
+            "150 words",
+            "50 words",
+            "250 words"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "How many sections does the IELTS Listening test have?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "3"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "About how long does the IELTS Speaking test last?",
+          "options": [
+            "2 minutes",
+            "30 minutes",
+            "1 hour",
+            "11-14 minutes"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "How many passages are there in IELTS Academic Reading?",
+          "options": [
+            "2",
+            "4",
+            "3",
+            "5"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "What is the IELTS band scale?",
+          "options": [
+            "0-100",
+            "1-5",
+            "0-9",
+            "1-10"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "IELTS Speaking Part 2 is ...",
+          "options": [
+            "a talk on a cue card",
+            "a reading-aloud task",
+            "a two-way discussion",
+            "a short interview"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which is an IELTS Speaking assessment criterion?",
+          "options": [
+            "Listening accuracy",
+            "Handwriting",
+            "Fluency and Coherence",
+            "Typing speed"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Which is an IELTS Writing assessment criterion?",
+          "options": [
+            "Handwriting",
+            "Eye contact",
+            "Lexical Resource",
+            "Pronunciation"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "In IELTS Reading, \"NOT GIVEN\" means ...",
+          "options": [
+            "the statement is true",
+            "the text is incomplete",
+            "the statement is false",
+            "the information is not in the text"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "In IELTS Reading, \"FALSE\" means ...",
+          "options": [
+            "the text contradicts the statement",
+            "the idea is not mentioned",
+            "the text is unclear",
+            "the statement matches the text"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "A synonym of \"mitigate\" is ...",
+          "options": [
+            "ignore",
+            "worsen",
+            "cause",
+            "reduce"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "A synonym of \"detrimental\" is ...",
+          "options": [
+            "neutral",
+            "tiny",
+            "helpful",
+            "harmful"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "A synonym of \"ubiquitous\" is ...",
+          "options": [
+            "expensive",
+            "found everywhere",
+            "ancient",
+            "rare"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A synonym of \"alleviate\" is ...",
+          "options": [
+            "increase",
+            "delay",
+            "ease",
+            "create"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "A synonym of \"substantial\" is ...",
+          "options": [
+            "tiny",
+            "considerable",
+            "unlikely",
+            "weak"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "The opposite of \"scarce\" is ...",
+          "options": [
+            "limited",
+            "abundant",
+            "rare",
+            "few"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "\"Sustainable\" means ...",
+          "options": [
+            "dangerous",
+            "able to continue without causing damage",
+            "quickly made",
+            "very expensive"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which is a renewable energy source?",
+          "options": [
+            "Oil",
+            "Coal",
+            "Solar power",
+            "Diesel"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Deforestation\" means ...",
+          "options": [
+            "the clearing of forests",
+            "burning fuel",
+            "protecting wildlife",
+            "planting trees"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "\"Urbanisation\" is ...",
+          "options": [
+            "the decline of towns",
+            "rural development",
+            "the growth of cities",
+            "farming"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "\"Biodiversity\" refers to ...",
+          "options": [
+            "population growth",
+            "types of weather",
+            "pollution levels",
+            "the variety of living things"
+          ],
+          "correct": 3
+        },
+        {
+          "question": "The number of accidents ___ risen sharply.",
+          "options": [
+            "have",
+            "has",
+            "are",
+            "were"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "A number of students ___ late for class.",
+          "options": [
+            "was",
+            "were",
+            "is",
+            "has been"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Fewer people ___ to the library nowadays.",
+          "options": [
+            "is going",
+            "going",
+            "go",
+            "goes"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "There is ___ pollution than before.",
+          "options": [
+            "less",
+            "many",
+            "few",
+            "fewer"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Which word is more formal?",
+          "options": [
+            "get",
+            "purchase",
+            "buy",
+            "grab"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Which word is more academic?",
+          "options": [
+            "kick off",
+            "get going",
+            "commence",
+            "set off"
+          ],
+          "correct": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreIQ — Intelligent Testing System</title>
+  <style>
+    :root {
+      --bg-color: #0c0d10;
+      --bg-overlay: rgba(12, 13, 16, 0.85);
+      --text-color: #e2e4e9;
+      --text-secondary: rgba(226, 228, 233, 0.65);
+      --card-bg: rgba(226, 228, 233, 0.05);
+      --card-hover-bg: rgba(226, 228, 233, 0.09);
+      --input-bg: rgba(226, 228, 233, 0.07);
+      
+      --btn-bg: #e2e4e9;
+      --btn-text: #0c0d10;
+      --btn-stroke-shadow: 4px 4px 0px rgba(255, 255, 255, 0.22);
+      --btn-stroke-shadow-hover: 7px 7px 0px rgba(255, 255, 255, 0.38);
+      
+      --bg-img-url: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop');
+      --transition-speed: 0.4s;
+    }
+
+    [data-theme="light"] {
+      --bg-color: #e7ebef;
+      --bg-overlay: rgba(231, 235, 239, 0.88);
+      --text-color: #16181b;
+      --text-secondary: rgba(22, 24, 27, 0.7);
+      --card-bg: rgba(255, 255, 255, 0.6);
+      --card-hover-bg: rgba(255, 255, 255, 0.85);
+      --input-bg: rgba(0, 0, 0, 0.05);
+      
+      --btn-bg: #16181b;
+      --btn-text: #f1f3f6;
+      --btn-stroke-shadow: 4px 4px 0px rgba(0, 0, 0, 0.18);
+      --btn-stroke-shadow-hover: 7px 7px 0px rgba(0, 0, 0, 0.32);
+
+      --bg-img-url: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop');
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .bg-image {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: var(--bg-img-url);
+      background-size: cover; background-position: center;
+      transition: background-image 0.6s ease;
+      z-index: -2; opacity: 0.45;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: var(--bg-overlay);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+    }
+
+    button {
+      border: none !important;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+                  box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+                  background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-solid {
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      border-radius: 8px;
+      box-shadow: var(--btn-stroke-shadow);
+    }
+
+    .btn-solid:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: var(--btn-stroke-shadow-hover);
+    }
+
+    .btn-solid:active {
+      transform: translate(0px, 0px);
+      box-shadow: var(--btn-stroke-shadow);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3.5rem;
+      position: fixed;
+      top: 0; width: 100%;
+      z-index: 100;
+    }
+
+    .left-header { display: flex; align-items: center; gap: 1.5rem; }
+
+    .burger-btn {
+      display: none;
+      background: var(--card-bg);
+      color: var(--text-color);
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      flex-direction: column;
+      justify-content: center; align-items: center;
+      gap: 5px; cursor: pointer; z-index: 110;
+    }
+
+    .burger-btn span {
+      display: block; width: 20px; height: 2px;
+      background-color: currentColor; border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .burger-btn.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger-btn.active span:nth-child(2) { opacity: 0; }
+    .burger-btn.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .logo-container { display: flex; flex-direction: column; cursor: pointer; }
+    .logo-brand { font-weight: 900; font-size: 1.6rem; letter-spacing: 3px; text-transform: uppercase; line-height: 1; }
+    .logo-sub { font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); margin-top: 4px; font-weight: 600; }
+
+    nav.desktop-nav { display: flex; gap: 2.5rem; }
+
+    .nav-link {
+      position: relative; text-decoration: none;
+      color: var(--text-color); font-size: 0.95rem; font-weight: 500;
+      letter-spacing: 1px; padding-bottom: 6px; cursor: pointer;
+    }
+
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px;
+      background-color: var(--text-color); transform: scaleX(0); transform-origin: left;
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+
+    .header-actions { display: flex; align-items: center; gap: 1.2rem; }
+
+    .theme-toggle-btn {
+      background: var(--card-bg); color: var(--text-color);
+      display: flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px; border-radius: 12px; box-shadow: none !important;
+      transition: background-color 0.3s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .theme-toggle-btn:hover { background: var(--card-hover-bg); }
+    .theme-toggle-btn.rotating { transform: rotate(360deg) scale(1.1); }
+    .theme-toggle-btn svg { width: 22px; height: 22px; fill: currentColor; }
+
+    .avatar-wrapper { position: relative; }
+
+    .user-avatar-btn {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--btn-bg); color: var(--btn-text);
+      font-weight: 800; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--btn-stroke-shadow); position: relative; user-select: none;
+    }
+    .user-avatar-btn:hover { transform: translate(-2px, -2px); box-shadow: var(--btn-stroke-shadow-hover); }
+
+    .online-indicator {
+      position: absolute; bottom: 2px; right: 2px; width: 9px; height: 9px;
+      background-color: #10b981; border: 2px solid var(--bg-color); border-radius: 50%;
+    }
+
+    .profile-dropdown {
+      position: absolute; top: calc(100% + 14px); right: 0; width: 260px;
+      background: var(--card-bg); backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 1.2rem;
+      opacity: 0; visibility: hidden; transform: translateY(-10px);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3); z-index: 120;
+    }
+
+    [data-theme="light"] .profile-dropdown { border-color: rgba(0, 0, 0, 0.08); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08); }
+
+    .avatar-wrapper:hover .profile-dropdown,
+    .avatar-wrapper.active .profile-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+
+    .profile-header {
+      display: flex; align-items: center; gap: 0.9rem; padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: 0.8rem;
+    }
+    [data-theme="light"] .profile-header { border-bottom-color: rgba(0, 0, 0, 0.08); }
+
+    .profile-avatar-large {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--btn-bg); color: var(--btn-text);
+      font-weight: 800; display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+
+    .profile-details h4 { font-size: 0.95rem; font-weight: 700; line-height: 1.2; }
+    .profile-details p { font-size: 0.75rem; color: var(--text-secondary); margin-top: 3px; }
+
+    .profile-badge {
+      display: inline-block; margin-top: 4px; padding: 2px 8px;
+      background: rgba(16, 185, 129, 0.15); color: #10b981;
+      font-size: 0.65rem; font-weight: 700; border-radius: 20px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    .dropdown-btn {
+      width: 100%; padding: 0.75rem 0.8rem; text-align: left; background: transparent;
+      color: var(--text-color); font-size: 0.88rem; font-weight: 500; border-radius: 10px;
+      display: flex; align-items: center; gap: 0.8rem; box-shadow: none !important; margin-bottom: 2px;
+    }
+    .dropdown-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; opacity: 0.8; }
+    .dropdown-btn:hover { background: var(--card-hover-bg); transform: translateX(4px); }
+
+    .mobile-nav-drawer {
+      position: fixed; top: 0; left: 0; width: 280px; height: 100%;
+      background: var(--card-bg); backdrop-filter: blur(25px); z-index: 105;
+      padding: 6rem 2rem 2rem 2rem; display: flex; flex-direction: column; gap: 1.5rem;
+      transform: translateX(-100%); transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+    }
+    .mobile-nav-drawer.open { transform: translateX(0); }
+
+    .mobile-nav-link {
+      font-size: 1.15rem; font-weight: 600; color: var(--text-color); text-decoration: none;
+      display: flex; align-items: center; gap: 1rem; padding: 0.8rem 1rem; border-radius: 12px;
+    }
+    .mobile-nav-link.active, .mobile-nav-link:hover { background: var(--card-hover-bg); }
+    .mobile-nav-link svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    .mobile-drawer-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(3px); z-index: 104;
+      opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+    }
+    .mobile-drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+    .app-viewport { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+
+    .screen {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      padding: 2rem; opacity: 0; pointer-events: none; transform: translateX(0);
+      transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease;
+    }
+    .screen.active { opacity: 1; pointer-events: all; transform: translateX(0); }
+
+    .screen.swipe-left-out { animation: swipeLeftOut 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+    .screen.swipe-left-in { animation: swipeLeftIn 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+    .screen.swipe-right-out { animation: swipeRightOut 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+    .screen.swipe-right-in { animation: swipeRightIn 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+
+    @keyframes swipeLeftOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(-100%); opacity: 0; } }
+    @keyframes swipeLeftIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes swipeRightOut { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
+    @keyframes swipeRightIn { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+    .main-title { font-size: 5.5rem; font-weight: 900; letter-spacing: 8px; margin-bottom: 0.3rem; text-transform: uppercase; text-align: center; }
+
+    .typing-container {
+      font-size: 1.15rem; color: var(--text-secondary); letter-spacing: 1.5px;
+      height: 2rem; display: flex; align-items: center; margin-bottom: 2rem; text-align: center;
+    }
+
+    .cursor {
+      display: inline-block; width: 2px; height: 1.1rem;
+      background-color: var(--text-color); margin-left: 4px; animation: blink 0.8s infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .menu-description {
+      max-width: 620px; text-align: center; font-size: 0.95rem; line-height: 1.7;
+      color: var(--text-secondary); background: var(--card-bg); padding: 1.8rem 2.2rem;
+      border-radius: 16px; backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .category-buttons-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem; width: 100%; max-width: 900px; margin-top: 1.8rem;
+    }
+
+    .cat-btn {
+      background: var(--card-bg); color: var(--text-color); padding: 2rem 1.6rem;
+      border-radius: 16px; text-align: left; backdrop-filter: blur(12px);
+      box-shadow: var(--btn-stroke-shadow); display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .cat-btn:hover {
+      background: var(--card-hover-bg); transform: translate(-3px, -3px);
+      box-shadow: var(--btn-stroke-shadow-hover);
+    }
+
+    .cat-header { display: flex; justify-content: space-between; align-items: center; }
+    .cat-icon-wrapper {
+      width: 38px; height: 38px; border-radius: 10px; background: var(--input-bg);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cat-icon-wrapper svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    .cat-btn h3 { font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; display: flex; justify-content: space-between; align-items: center; }
+    .cat-btn h3 span { font-size: 1rem; opacity: 0.5; transition: transform 0.3s ease, opacity 0.3s ease; }
+    .cat-btn:hover h3 span { opacity: 1; transform: translateX(4px); }
+    .cat-btn p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Полноценный экран конфигурации теста (в стиле настроек сайта) */
+    .config-card {
+      width: 100%; max-width: 500px; background: var(--card-bg);
+      backdrop-filter: blur(16px); border-radius: 20px; padding: 2.5rem 2rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+    }
+    .config-card h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.4rem; letter-spacing: 1px; }
+    .config-card p { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.8rem; }
+
+    .input-group { margin-bottom: 1.2rem; }
+    .input-group label { display: block; font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px; font-weight: 600; }
+    .input-group input {
+      width: 100%; padding: 1rem 1.1rem; background: var(--input-bg);
+      border: none; border-radius: 10px; color: var(--text-color); font-size: 0.92rem;
+    }
+
+    /* Кастомный селект в стиле сайта */
+    .custom-select-wrapper { position: relative; width: 100%; cursor: pointer; user-select: none; }
+    .custom-select-trigger {
+      width: 100%; padding: 1rem 1.1rem; background: var(--input-bg);
+      border-radius: 10px; color: var(--text-color); font-size: 0.92rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .custom-options {
+      position: absolute; top: calc(100% + 6px); left: 0; width: 100%;
+      background: var(--card-bg); backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
+      overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-8px);
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); z-index: 130;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    [data-theme="light"] .custom-options { border-color: rgba(0,0,0,0.08); }
+    .custom-select-wrapper.open .custom-options { opacity: 1; visibility: visible; transform: translateY(0); }
+    .custom-option { padding: 0.8rem 1.1rem; font-size: 0.9rem; color: var(--text-color); transition: background 0.2s; }
+    .custom-option:hover { background: var(--card-hover-bg); }
+
+    .auth-full-container { width: 100%; max-width: 440px; position: relative; overflow: hidden; }
+
+    .auth-slider { display: flex; width: 200%; transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1); }
+    .auth-slider.show-register { transform: translateX(-50%); }
+
+    .auth-form-card {
+      width: 50%; padding: 2.5rem 2rem; background: var(--card-bg);
+      backdrop-filter: blur(16px); border-radius: 20px;
+    }
+    .auth-form-card h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.4rem; letter-spacing: 1px; }
+    .auth-form-card p { color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.8rem; }
+
+    .auth-submit-btn { width: 100%; padding: 1rem; font-weight: 700; font-size: 0.92rem; margin-top: 0.6rem; }
+
+    .auth-switch-text { margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary); text-align: center; }
+    .auth-switch-btn { background: none; color: var(--text-color); font-weight: 600; text-decoration: underline; margin-left: 4px; padding: 2px 4px; box-shadow: none !important; }
+
+    .back-to-menu-btn {
+      margin-top: 1.2rem; background: none; color: var(--text-secondary);
+      font-size: 0.82rem; display: flex; align-items: center; gap: 0.5rem;
+      padding: 6px 12px; box-shadow: none !important;
+    }
+    .back-to-menu-btn:hover { color: var(--text-color); }
+
+    .settings-container {
+      width: 100%; max-width: 820px; max-height: calc(100vh - 170px);
+      overflow-y: auto; padding-right: 6px;
+    }
+    .settings-container::-webkit-scrollbar { width: 5px; }
+    .settings-container::-webkit-scrollbar-thumb { background: var(--card-hover-bg); border-radius: 10px; }
+
+    .settings-header { text-align: center; margin-bottom: 1.5rem; }
+    .settings-header h2 { font-size: 2.2rem; letter-spacing: 3px; margin-bottom: 0.3rem; }
+    .settings-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    .settings-card {
+      background: var(--card-bg); backdrop-filter: blur(16px);
+      border-radius: 16px; padding: 1.35rem 1.5rem; margin-bottom: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+    .settings-card-title {
+      display: flex; align-items: center; gap: 0.7rem; font-size: 1rem;
+      font-weight: 750; letter-spacing: 0.4px; margin-bottom: 0.35rem;
+    }
+    .settings-card-title svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 2; opacity: 0.85; }
+    .settings-card-subtitle { color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 1rem; line-height: 1.5; }
+
+    .settings-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; }
+
+    .settings-option {
+      background: var(--input-bg); color: var(--text-color); border-radius: 12px;
+      padding: 1rem 1.1rem; text-align: left; box-shadow: none !important;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid transparent;
+    }
+    .settings-option:hover { background: var(--card-hover-bg); transform: translateY(-2px); }
+    .settings-option.active { border-color: var(--text-color); background: var(--card-hover-bg); }
+
+    .settings-option-content strong { display: block; font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .settings-option-content span { display: block; color: var(--text-secondary); font-size: 0.75rem; }
+
+    .settings-check {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--btn-bg); color: var(--btn-text);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 900; opacity: 0; transform: scale(0.7);
+      transition: opacity 0.25s ease, transform 0.25s ease; flex-shrink: 0;
+    }
+    .settings-option.active .settings-check { opacity: 1; transform: scale(1); }
+    .settings-footer { display: flex; justify-content: center; margin-top: 0.5rem; }
+
+    @media (max-width: 900px) {
+      header { padding: 1.2rem 1.8rem; }
+      nav.desktop-nav { display: none; }
+      .burger-btn { display: flex; }
+      .main-title { font-size: 3.8rem; letter-spacing: 5px; }
+      .typing-container { font-size: 1rem; }
+      .menu-description { padding: 1.4rem 1.5rem; font-size: 0.9rem; }
+      .category-buttons-grid { grid-template-columns: 1fr; max-height: 55vh; overflow-y: auto; padding-right: 4px; }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 1rem 1.2rem; }
+      .main-title { font-size: 2.8rem; letter-spacing: 3px; }
+      .auth-form-card { padding: 2rem 1.4rem; }
+      .screen { padding: 1.2rem; }
+      .profile-dropdown { width: 240px; right: -10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-image"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a class="mobile-nav-link active" onclick="navigateTo('home'); toggleMobileMenu();">
+      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Home</span>
+    </a>
+    <a class="mobile-nav-link" onclick="navigateTo('categories'); toggleMobileMenu();">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Categories</span>
+    </a>
+    <a class="mobile-nav-link" onclick="navigateTo('tests'); toggleMobileMenu();">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span>Tests</span>
+    </a>
+    <a class="mobile-nav-link" onclick="navigateTo('settings'); toggleMobileMenu();">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <span>Settings</span>
+    </a>
+  </div>
+
+  <header>
+    <div class="left-header">
+      <button class="burger-btn" id="burgerBtn" onclick="toggleMobileMenu()" title="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="logo-container" onclick="navigateTo('home')">
+        <div class="logo-brand">CoreIQ</div>
+        <div class="logo-sub">Intelligent Testing</div>
+      </div>
+    </div>
+
+    <nav class="desktop-nav">
+      <a class="nav-link active" onclick="navigateTo('home')"><span>Home</span></a>
+      <a class="nav-link" onclick="navigateTo('categories')"><span>Categories</span></a>
+      <a class="nav-link" onclick="navigateTo('tests')"><span>Tests</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle-btn" id="themeToggle" title="Change Theme">
+        <svg id="themeIcon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4.5" />
+          <path d="M12 2v2.5M12 19.5V22M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M2 12h2.5M19.5 12H22M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77" 
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="avatar-wrapper" id="avatarWrapper">
+        <button class="user-avatar-btn" id="avatarBtn" title="Profile">
+          U
+          <span class="online-indicator"></span>
+        </button>
+
+        <div class="profile-dropdown">
+          <div class="profile-header">
+            <div class="profile-avatar-large">U</div>
+            <div class="profile-details">
+              <h4>User Account</h4>
+              <p>user@coreiq.io</p>
+              <span class="profile-badge">PRO Member</span>
+            </div>
+          </div>
+          <button class="dropdown-btn" onclick="navigateTo('auth')">
+            <svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            <span>Sign in / Account</span>
+          </button>
+          <button class="dropdown-btn" onclick="navigateTo('settings'); avatarWrapper.classList.remove('active');">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span>Settings</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-viewport">
+    
+    <section id="screen-home" class="screen active" data-index="0">
+      <h1 class="main-title">COREIQ</h1>
+      <div class="typing-container">
+        <span id="typing-text"></span><span class="cursor"></span>
+      </div>
+      <div class="menu-description">
+        CoreIQ — a smart testing platform. A clean interface, thoughtful structure, and fast analysis of your knowledge.
+      </div>
+    </section>
+
+    <section id="screen-categories" class="screen" data-index="1">
+      <h2 style="font-size: 2.2rem; letter-spacing: 3px; margin-bottom: 0.3rem;">CATEGORIES</h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem;">Choose a preparation path</p>
+      <div class="category-buttons-grid" id="categories-grid-container"></div>
+    </section>
+
+    <section id="screen-tests" class="screen" data-index="2">
+      <h2 style="font-size: 2.2rem; letter-spacing: 3px; margin-bottom: 0.3rem;">TESTS</h2>
+      <p style="color: var(--text-secondary); font-size: 0.9rem;">Quick skills assessment</p>
+      <div class="category-buttons-grid" id="tests-grid-container"></div>
+    </section>
+
+    <!-- Полноценный экран настройки параметров теста -->
+    <section id="screen-config" class="screen" data-index="3">
+      <div class="config-card">
+        <h2 id="configTestTitle">Test Configuration</h2>
+        <p>Set parameters before starting your assessment.</p>
+
+        <div class="input-group">
+          <label>Number of questions</label>
+          <input type="number" id="configCount" min="1" value="3">
+        </div>
+
+        <div class="input-group">
+          <label>Time limit</label>
+          <div class="custom-select-wrapper" id="customSelect">
+            <div class="custom-select-trigger" id="selectTrigger">3 minutes</div>
+            <div class="custom-options">
+              <div class="custom-option" data-value="60">1 minute</div>
+              <div class="custom-option" data-value="180">3 minutes</div>
+              <div class="custom-option" data-value="300">5 minutes</div>
+              <div class="custom-option" data-value="600">10 minutes</div>
+              <div class="custom-option" data-value="0">No limit</div>
+            </div>
+          </div>
+          <input type="hidden" id="configTimer" value="180">
+        </div>
+
+        <button class="btn-solid auth-submit-btn" onclick="startConfiguredTest()">Start Test</button>
+        <div style="display:flex; justify-content:center;">
+          <button class="back-to-menu-btn" onclick="navigateTo('tests')">← Back to Tests</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen" data-index="5">
+      <div class="config-card" style="max-width: 600px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+          <h2 id="quiz-title" style="font-size: 1.8rem; font-weight: 800; letter-spacing: 1px;">Test</h2>
+          <div id="quiz-timer" style="font-weight: 700; color: #10b981; font-size: 0.95rem;"></div>
+        </div>
+        <p id="quiz-subtitle" style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.8rem;">Question 1</p>
+        
+        <div id="quiz-question-container" style="font-size: 1.05rem; font-weight: 600; margin-bottom: 1.5rem; line-height: 1.5; color: var(--text-color);"></div>
+        <div id="quiz-options-container" style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.8rem;"></div>
+
+        <button class="btn-solid auth-submit-btn" id="quiz-next-btn" style="display: none;">Next Question</button>
+
+        <div style="display:flex; justify-content:center; margin-top: 1rem;">
+          <button class="back-to-menu-btn" onclick="navigateTo('tests')">← Exit Test</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-settings" class="screen" data-index="4">
+      <div class="settings-container">
+        <div class="settings-header"> 
+          <h2>SETTINGS</h2>
+          <p>Customize CoreIQ to your preferences</p>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-title">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l-.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06-.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span>Appearance</span>
+          </div>
+          <div class="settings-card-subtitle">Choose the interface theme.</div>
+          <div class="settings-options">
+            <button class="settings-option" id="themeOptionDark" onclick="setTheme('dark')">
+              <div class="settings-option-content">
+                <strong>Dark</strong>
+                <span>Comfortable dark interface</span>
+              </div>
+              <div class="settings-check">✓</div>
+            </button>
+            <button class="settings-option" id="themeOptionLight" onclick="setTheme('light')">
+              <div class="settings-option-content">
+                <strong>Light</strong>
+                <span>Soft light interface</span>
+              </div>
+              <div class="settings-check">✓</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="settings-card-title">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="10" x2="12" y2="16"/><line x1="12" y1="7" x2="12.01" y2="7"/></svg>
+            <span>About CoreIQ</span>
+          </div>
+          <div class="settings-card-subtitle">CoreIQ is an intelligent testing system built for focused practice, quick assessment, and structured learning.</div>
+        </div>
+
+        <div class="settings-footer">
+          <button class="back-to-menu-btn" onclick="navigateTo('home')">← <span>Back to home</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-auth" class="screen" data-index="6">
+      <div class="auth-full-container">
+        <div class="auth-slider" id="authSlider">
+          <div class="auth-form-card">
+            <h2>Login</h2>
+            <p>Welcome to CoreIQ</p>
+            <div class="input-group"><input type="text" placeholder="Username or Email"></div>
+            <div class="input-group"><input type="password" placeholder="Password"></div>
+            <button class="btn-solid auth-submit-btn">Sign in</button>
+            <div class="auth-switch-text"><span>No account?</span> <button class="auth-switch-btn" onclick="switchAuthForm('register')">Create one</button></div>
+            <div style="display:flex; justify-content:center;"><button class="back-to-menu-btn" onclick="navigateTo('home')">← Back to home</button></div>
+          </div>
+          <div class="auth-form-card">
+            <h2>Register</h2>
+            <p>Create a new CoreIQ profile</p>
+            <div class="input-group"><input type="text" placeholder="Username"></div>
+            <div class="input-group"><input type="email" placeholder="Email address"></div>
+            <div class="input-group"><input type="password" placeholder="Create a password"></div>
+            <button class="btn-solid auth-submit-btn">Create profile</button>
+            <div class="auth-switch-text"><span>Already have an account?</span> <button class="auth-switch-btn" onclick="switchAuthForm('login')">Sign in</button></div>
+            <div style="display:flex; justify-content:center;"><button class="back-to-menu-btn" onclick="navigateTo('home')">← Back to home</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let allTestsData = {};
+    let currentQuestions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let currentTestTitle = "";
+    let selectedTestKey = null;
+    let timerInterval = null;
+    let timeLeft = 0;
+
+    async function loadDataFromJSON() {
+      try {
+        const response = await fetch('tests.json');
+        if (!response.ok) throw new Error('Failed to load tests.json');
+        allTestsData = await response.json();
+        renderCategories(allTestsData.categories || []);
+        renderTests(allTestsData.tests || {});
+      } catch (err) {
+        console.error(err);
+        alert('Error loading tests.json! Make sure the file is next to index.html and you use a local server.');
+      }
+    }
+
+    function renderCategories(categories) {
+      const container = document.getElementById('categories-grid-container');
+      container.innerHTML = '';
+      categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'cat-btn';
+        btn.onclick = () => navigateTo('tests');
+        btn.innerHTML = `
+          <div class="cat-header"><div class="cat-icon-wrapper"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span>→</span></div>
+          <h3>${cat.title}</h3><p>${cat.description}</p>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    function renderTests(tests) {
+      const container = document.getElementById('tests-grid-container');
+      container.innerHTML = '';
+      for (const key in tests) {
+        const test = tests[key];
+        const btn = document.createElement('button');
+        btn.className = 'cat-btn';
+        btn.onclick = () => prepareTest(key);
+        btn.innerHTML = `
+          <div class="cat-header"><div class="cat-icon-wrapper"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span>→</span></div>
+          <h3>${test.title}</h3><p>Available questions: ${test.questions.length}</p>
+        `;
+        container.appendChild(btn);
+      }
+    }
+
+    // Переход к экрану настройки теста
+    function prepareTest(testKey) {
+      selectedTestKey = testKey;
+      const test = allTestsData.tests[testKey];
+      document.getElementById('configTestTitle').textContent = test.title;
+      
+      const countInput = document.getElementById('configCount');
+      countInput.max = test.questions.length;
+      countInput.value = Math.min(3, test.questions.length);
+
+      navigateTo('config');
+    }
+
+    // Запуск теста после экрана конфигурации
+    function startConfiguredTest() {
+      const test = allTestsData.tests[selectedTestKey];
+      const requestedCount = parseInt(document.getElementById('configCount').value) || 3;
+      const timeLimitSec = parseInt(document.getElementById('configTimer').value);
+
+      // Рандомизация вопросов
+      const shuffled = [...test.questions].sort(() => Math.random() - 0.5);
+      currentQuestions = shuffled.slice(0, requestedCount);
+
+      currentTestTitle = test.title;
+      currentQuestionIndex = 0;
+      score = 0;
+
+      navigateTo('quiz');
+      loadQuestion();
+
+      if (timerInterval) clearInterval(timerInterval);
+      if (timeLimitSec > 0) {
+        timeLeft = timeLimitSec;
+        updateTimerDisplay();
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          updateTimerDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            finishQuiz();
+          }
+        }, 1000);
+      } else {
+        document.getElementById('quiz-timer').textContent = '';
+      }
+    }
+
+    function updateTimerDisplay() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      document.getElementById('quiz-timer').textContent = `⏳ ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    function loadQuestion() {
+      const qContainer = document.getElementById('quiz-question-container');
+      const optContainer = document.getElementById('quiz-options-container');
+      const nextBtn = document.getElementById('quiz-next-btn');
+      const quizTitle = document.getElementById('quiz-title');
+      const quizSubtitle = document.getElementById('quiz-subtitle');
+      
+      nextBtn.style.display = 'none';
+
+      if (currentQuestionIndex < currentQuestions.length) {
+        const q = currentQuestions[currentQuestionIndex];
+        quizTitle.textContent = currentTestTitle;
+        quizSubtitle.textContent = `Question ${currentQuestionIndex + 1} of ${currentQuestions.length}`;
+        qContainer.textContent = q.question;
+        optContainer.innerHTML = '';
+
+        q.options.forEach((opt, index) => {
+          const btn = document.createElement('button');
+          btn.className = 'settings-option';
+          btn.style.width = '100%';
+          btn.innerHTML = `<div class="settings-option-content"><strong>${opt}</strong></div>`;
+          btn.onclick = () => selectAnswer(index, q.correct);
+          optContainer.appendChild(btn);
+        });
+      } else {
+        finishQuiz();
+      }
+    }
+
+    function selectAnswer(selectedIndex, correctIndex) {
+      const options = document.getElementById('quiz-options-container').children;
+      
+      for (let i = 0; i < options.length; i++) {
+        options[i].style.pointerEvents = 'none';
+        if (i === correctIndex) {
+          options[i].style.borderColor = '#10b981';
+          options[i].style.background = 'rgba(16, 185, 129, 0.15)';
+        } else if (i === selectedIndex) {
+          options[i].style.borderColor = '#ef4444';
+          options[i].style.background = 'rgba(239, 68, 68, 0.15)';
+        }
+      }
+
+      if (selectedIndex === correctIndex) {
+        score++;
+      }
+
+      const nextBtn = document.getElementById('quiz-next-btn');
+      nextBtn.style.display = 'block';
+      nextBtn.onclick = () => {
+        currentQuestionIndex++;
+        loadQuestion();
+      };
+    }
+
+    // Подсчет результатов с крутой оценкой, цветом и вердиктом
+    function finishQuiz() {
+      if (timerInterval) clearInterval(timerInterval);
+      document.getElementById('quiz-timer').textContent = '';
+
+      const total = currentQuestions.length;
+      const percent = (score / total) * 100;
+
+      let verdict = "";
+      let color = "";
+
+      if (percent === 100) {
+        verdict = "🔥 Excellent! Outstanding performance, a truly brilliant score!";
+        color = "#10b981"; // Зеленый
+      } else if (percent >= 75) {
+        verdict = "🌟 Great job! A solid score with strong knowledge.";
+        color = "#3b82f6"; // Синий
+      } else if (percent >= 50) {
+        verdict = "⚡ Not bad, a normal level, but there is room to grow.";
+        color = "#f59e0b"; // Оранжевый
+      } else {
+        verdict = "⚠️ Weak result, consider reviewing the material.";
+        color = "#ef4444"; // Красный
+      }
+
+      const quizTitle = document.getElementById('quiz-title');
+      const quizSubtitle = document.getElementById('quiz-subtitle');
+      const qContainer = document.getElementById('quiz-question-container');
+      const optContainer = document.getElementById('quiz-options-container');
+      const nextBtn = document.getElementById('quiz-next-btn');
+
+      quizTitle.textContent = "Test Completed! 🎉";
+      quizSubtitle.textContent = "Assessment Summary";
+      
+      qContainer.innerHTML = `
+        <div style="font-size: 1.2rem; margin-bottom: 1rem;">
+          Correct answers: <strong>${score}</strong> out of <strong>${total}</strong> (${Math.round(percent)}%)
+        </div>
+        <div style="padding: 1rem; border-radius: 12px; background: rgba(255,255,255,0.05); border-left: 5px solid ${color}; color: ${color}; font-weight: 700; font-size: 1.1rem;">
+          ${verdict}
+        </div>
+      `;
+
+      optContainer.innerHTML = '';
+      nextBtn.style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', loadDataFromJSON);
+
+    // Кастомный селект (выпадающий список времени)
+    const selectWrapper = document.getElementById('customSelect');
+    const selectTrigger = document.getElementById('selectTrigger');
+    const hiddenInput = document.getElementById('configTimer');
+
+    selectTrigger.addEventListener('click', () => {
+      selectWrapper.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.custom-option').forEach(option => {
+      option.addEventListener('click', () => {
+        selectTrigger.textContent = option.textContent;
+        hiddenInput.value = option.getAttribute('data-value');
+        selectWrapper.classList.remove('open');
+      });
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!selectWrapper.contains(e.target)) {
+        selectWrapper.classList.remove('open');
+      }
+    });
+
+    const phrases = [
+      "Intelligent Testing System.",
+      "Fast and effective testing.",
+      "A modern minimalist approach."
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingTextEl = document.getElementById('typing-text');
+
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
+      if (isDeleting) {
+        typingTextEl.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingTextEl.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      let currentSpeed = isDeleting ? 35 : 65;
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        currentSpeed = 2200;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        currentSpeed = 400;
+      }
+      setTimeout(typeEffect, currentSpeed);
+    }
+    document.addEventListener('DOMContentLoaded', typeEffect);
+
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlEl = document.documentElement;
+
+    const sunSvg = `<circle cx="12" cy="12" r="4.5" /><path d="M12 2v2.5M12 19.5V22M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M2 12h2.5M19.5 12H22M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>`;
+    const moonSvg = `<path d="M12.3 2a10 10 0 0 0 9.7 11.5 10 10 0 1 1-11.5-9.7z"/>`;
+
+    themeToggleBtn.addEventListener('click', () => {
+      themeToggleBtn.classList.add('rotating');
+      setTimeout(() => {
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+          htmlEl.setAttribute('data-theme', 'light');
+          themeIcon.innerHTML = sunSvg;
+        } else {
+          htmlEl.setAttribute('data-theme', 'dark');
+          themeIcon.innerHTML = moonSvg;
+        }
+      }, 200);
+      setTimeout(() => { themeToggleBtn.classList.remove('rotating'); }, 600);
+    });
+
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+
+    function toggleMobileMenu() {
+      burgerBtn.classList.toggle('active');
+      mobileDrawer.classList.toggle('open');
+      drawerOverlay.classList.toggle('open');
+    }
+
+    let currentScreenId = 'home';
+    const screens = {
+      'home': document.getElementById('screen-home'),
+      'categories': document.getElementById('screen-categories'),
+      'tests': document.getElementById('screen-tests'),
+      'config': document.getElementById('screen-config'),
+      'auth': document.getElementById('screen-auth'),
+      'settings': document.getElementById('screen-settings'),
+      'quiz': document.getElementById('screen-quiz')
+    };
+
+    function navigateTo(targetScreenId) {
+      if (targetScreenId === currentScreenId) return;
+      if (timerInterval) clearInterval(timerInterval);
+
+      const currentScreen = screens[currentScreenId];
+      const targetScreen = screens[targetScreenId];
+
+      const currentIndex = parseInt(currentScreen.getAttribute('data-index') || 0);
+      const targetIndex = parseInt(targetScreen.getAttribute('data-index') || 0);
+
+      Object.values(screens).forEach(s => s.className = 'screen');
+
+      if (targetIndex > currentIndex) {
+        currentScreen.classList.add('swipe-left-out');
+        targetScreen.classList.add('active', 'swipe-left-in');
+      } else {
+        currentScreen.classList.add('swipe-right-out');
+        targetScreen.classList.add('active', 'swipe-right-in');
+      }
+
+      document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => link.classList.remove('active'));
+      const navIndices = { 'home': 0, 'categories': 1, 'tests': 2, 'settings': 3 };
+      if (navIndices[targetScreenId] !== undefined) {
+        document.querySelectorAll('.desktop-nav .nav-link')[navIndices[targetScreenId]]?.classList.add('active');
+        document.querySelectorAll('.mobile-nav-drawer .mobile-nav-link')[navIndices[targetScreenId]]?.classList.add('active');
+      }
+      if (targetScreenId === 'settings') {
+        document.querySelectorAll('.desktop-nav .nav-link').forEach(link => link.classList.remove('active'));
+        document.querySelectorAll('.mobile-nav-drawer .mobile-nav-link').forEach(link => link.classList.remove('active'));
+        document.querySelector('.mobile-nav-drawer .mobile-nav-link:nth-child(4)')?.classList.add('active');
+      }
+
+      currentScreenId = targetScreenId;
+    }
+
+    function setTheme(theme) {
+      htmlEl.setAttribute('data-theme', theme);
+      localStorage.setItem('coreiq-theme', theme);
+      themeIcon.innerHTML = theme === 'dark' ? moonSvg : sunSvg;
+      updateSettingsSelection();
+    }
+
+    function updateSettingsSelection() {
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      document.getElementById('themeOptionDark')?.classList.toggle('active', currentTheme === 'dark');
+      document.getElementById('themeOptionLight')?.classList.toggle('active', currentTheme === 'light');
+    }
+
+    const savedTheme = localStorage.getItem('coreiq-theme');
+    if (savedTheme === 'light' || savedTheme === 'dark') setTheme(savedTheme);
+    else updateSettingsSelection();
+
+    const authSlider = document.getElementById('authSlider');
+    function switchAuthForm(formType) {
+      if (formType === 'register') authSlider.classList.add('show-register');
+      else authSlider.classList.remove('show-register');
+    }
+
+    const avatarWrapper = document.getElementById('avatarWrapper');
+    avatarWrapper.addEventListener('click', () => {
+      if (window.innerWidth <= 900) avatarWrapper.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
